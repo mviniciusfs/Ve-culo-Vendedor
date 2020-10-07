@@ -4,6 +4,10 @@ class Veiculo{
   string Marca;
   int Ano, Km;
   double Valor;
+  public double getValor()
+  {
+    return Valor;
+  }
 
   public void Relatorio(){
     Console.WriteLine("Informações do Veículo");
@@ -13,5 +17,13 @@ class Veiculo{
 
   public void Atualiza_valor(int ano_base){
     Valor = Valor - (ano_base - Ano)*2.05;
+  }
+
+  public Veiculo(string m, int a, int k, double v)
+  {
+    Marca = m;
+    Ano = a;
+    Km = k;
+    Valor = v;
   }
 }
